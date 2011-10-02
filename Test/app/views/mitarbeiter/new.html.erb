@@ -1,0 +1,16 @@
+
+		<h1>Neuen Mitarbeiter hinzufügen</h1>
+		<% form_tag :action => 'create'  do %>
+		<p><label for="mitarbeiter_vorname">Vorname</label>:
+		<%= text_field('mitarbeiter', 'vorname')%></p>
+		<p><label for="mitarbeiter_nachname">Nachname</label>:
+		<%= text_field('mitarbeiter', 'nachname') %></p>
+		<p><label for="mitarbeiter_firma">Firma</label>:
+		<%= collection_select(:mitarbeiter,:firma_id,@firmas,:id,:name) %></p>
+
+		<%= submit_tag "Create" %>
+		<% end  %>
+		<%= link_to 'Back', {:action => 'list'} %>
+
+	
+	

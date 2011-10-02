@@ -23,7 +23,7 @@ class MitarbeiterController < ApplicationController
   end
   
   def edit
-    @mitarbeiter =Mitarbeiter.find(params[:id])
+    @mitarbeiter = Mitarbeiter.find(params[:id])
     @firmas = Firma.find(:all)
   end
   
