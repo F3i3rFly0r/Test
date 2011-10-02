@@ -9,7 +9,11 @@ class MitarbeiterController < ApplicationController
   
   def new
     @mitarbeiter = Mitarbeiter.new
-    @firmas =Firma.find(:all)
+    
+    respond_to do |format|
+      format.html  # new.html.erb
+      format.json  { render :json => @mitarbeiter }
+    end
   end
   
   def create

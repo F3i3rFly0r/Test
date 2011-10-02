@@ -1,21 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Untitled Document</title>
-	</head>
-	<body>
-			<% if @mitarbeiters.blank? %>
-		<p>There are not any books currently in the system.</p>
-		<% else %>
-		<p>These are the current books in our system</p>
-		<ul id="mitarbeiters">
-		<% @mitarbeiters.each do |c| %>
-		<li><%= link_to c.nachname, {:action => 'show', :id => c.id} -%></li>
-		<% end %>
-		</ul>
-		<% end %>
-		<p><%= link_to "Add new Book", {:action => 'new' }%></p>
-	
-	</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Untitled Document</title>
+    </head>
+    <body>
+        <% if @mitarbeiters.blank? %>
+        <p>
+            There are not any books currently in the system.
+        </p>
+        <% else %>
+        <p>
+            These are the current books in our system
+        </p>
+        <ul id="mitarbeiters">
+            <% @mitarbeiters.each do |c| %>
+            <li>
+                <%= link_to c.nachname, {:action => 'show', :id => c.id} -%>
+            </li>
+            <% end %>
+        </ul>
+        <% end %>
+        <p>
+            <%= link_to "Add new Book", {:action => 'new' } %>
+        </p>
+    </body>
 </html>

@@ -1,3 +1,3 @@
 class Firma < ActiveRecord::Base
-  has_many :mitarbeiter
+  has_many :mitarbeiters
 end
