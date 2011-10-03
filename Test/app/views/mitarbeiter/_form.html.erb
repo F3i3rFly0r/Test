@@ -21,6 +21,13 @@
     <br/>
     <%= f.text_field :vorname %>
 </div>
+
+<div class="field">
+    <%= f.label :firma_id %>
+    <br/>
+    <%= f.select :firma_id, @firmas %>
+</div>
+
 <div class="actions">
     <%= f.submit %>
 </div>
