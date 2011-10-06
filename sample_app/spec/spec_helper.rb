@@ -59,5 +59,9 @@ RSpec.configure do |config|
 # railties/lib/rails/application/bootstrap.rb
 ActiveSupport::Dependencies.clear
 
+  def test_sign_in(user)
+    controller.sign_in(user)
+  end
+
   
 end
